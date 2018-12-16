@@ -14,12 +14,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         /* Passing string when button is pressed */
-
         SendEditTextValue = (Button)findViewById(R.id.btn_check);
         SendValue = (EditText)findViewById(R.id.input_name);
 
         SendInputNameValue.setOnClickListener(new View.OnClickListener()){
-
+            
         }
 
 
