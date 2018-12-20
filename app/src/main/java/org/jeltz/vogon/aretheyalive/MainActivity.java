@@ -1,5 +1,6 @@
 package org.jeltz.vogon.aretheyalive;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,13 +15,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         /* Passing string when button is pressed */
-        SendEditTextValue = (Button)findViewById(R.id.btn_check);
-        SendValue = (EditText)findViewById(R.id.input_name);
+        Button button = (Button)findViewById(R.id.btn_check);
 
-        SendInputNameValue.setOnClickListener(new View.OnClickListener()){
-            
+        button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View button){
+
+                /* get text to pass */
+                EditText editText = (EditText)findViewById(R.id.input_name);
+
+                /*start PresentationActivity */
+                Intent intent = new Intent(MainActivity.this, PresentationActivity.class);
+                intent.putExtra(Intent.EXTRA_TEXT, editText.getText().toString());
+                startActivity(intent);
+            }
+        });
+
+
         }
-
-
     }
-}
+
