@@ -3,6 +3,7 @@
     <string name="app_description">Type the name of a person to see if they\'re alive</string>
     <string name="input_name">Name</string>
     <string name="btn_check">Find out</string>
+    <string name="placeholder">Placeholder</string>
 
 
 </resources>

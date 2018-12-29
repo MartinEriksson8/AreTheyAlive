@@ -16,9 +16,9 @@ public class PresentationActivity extends AppCompatActivity {
 
             /* Showing string we passed as placeholder to see data transfer works */
             Intent intent = getIntent();
-            String name = intent.getStringExtra(intent.getStringExtra(intent.EXTRA_TEXT));
 
-            TextView textView = (TextView)findViewById(R.id.textView);
+            String name = intent.getStringExtra("CHECK_NAME");
+            TextView textView = findViewById(R.id.nameFromText);
             textView.setText(name);
     }
 }
